@@ -1,0 +1,48 @@
+.card-body{
+    min-height: 112px;
+}
+
+.card-img-top{
+    height: 430px;
+}
+
+.card{
+    width: 320px;
+    height: 584.4px;
+}
+
+.cardItem{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overview{
+    position: absolute;
+    bottom:137px;
+    text-align: justify;
+    padding: 0px 5px;
+    background-color: aliceblue;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+
+.card-img-top:hover .card-overview, .cardItem:hover .card-overview, .card:hover .card-overview{
+    animation: cart .1s linear;    
+    transform: translateX(0%);
+}
+
+@keyframes cart {
+    0%   { right:0px; bottom:137px;}
+    25%  { left:300px; bottom:137px;}
+    50%  { left:200px; bottom:137px;}
+    75%  { left:100px; bottom:137px;}
+    100% { left:0px; bottom:137px;}
+  }
+
+  @keyframes cartNo {
+    0%   { left:15px; bottom:30px;}
+    25%  { left:15px; bottom:21px;}
+    50%  { left:15px; bottom:14px;}
+    75%  { left:15px; bottom:7px;}
+    100% { left:15px; bottom:0px;}
+  }
