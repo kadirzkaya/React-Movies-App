@@ -5,7 +5,7 @@ import MovieContext from '../context/MovieContext';
 const ProtectedRoutesLogin=({redirectPath="/"})=> {
   const { token } = useContext(MovieContext);
 
-  if (token==="") {
+  if (token==="" || token===null) {
     return <Outlet/>
   }else{
     return <Navigate to={redirectPath}/>
